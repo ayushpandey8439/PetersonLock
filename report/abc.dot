@@ -1,0 +1,5 @@
+digraph abc {
+rankdir=LR;
+a -> b -> c -> d;
+a -> a;
+}

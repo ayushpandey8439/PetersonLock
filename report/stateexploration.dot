@@ -1,0 +1,21 @@
+digraph stateexploration {
+a1 [label=" /\\ flag = (0 :> FALSE @@ 1 :> FALSE)\\ /\\ state = (0 :> 'Start' @@ 1 :> 'Start')/\\ turn = 1"]
+a2 [label=" /\\ flag = (0 :> FALSE @@ 1 :> FALSE)/\\ state = (0 :> 'Start' @@ 1 :> 'Start')/\\ turn = 0"]
+b1 [label="/\\ flag = (0 :> TRUE @@ 1 :> FALSE)/\\ state = (0 :> 'RequestTurn' @@ 1 :> 'Start')/\\ turn = 1"]
+b2 [label="/\\ flag = (0 :> TRUE @@ 1 :> FALSE)/\\ state = (0 :> 'Start' @@ 1 :> 'RequestTurn')/\\ turn = 0"]
+c1 [label="/\\ flag = (0 :> TRUE @@ 1 :> FALSE)/\\ state = (0 :> 'Waiting' @@ 1 :> 'Start')/\\ turn = 1"]
+d1[label = "/\\ flag = (0 :> TRUE @@ 1 :> FALSE) /\\ state = (0 :> 'CriticalSection' @@ 1 :> 'Start\T1\textquoteright )/\\ turn = 1"]
+e1[label="/\\ flag = (0 :> TRUE @@ 1 :> TRUE)/\\ state = (0 :> 'CriticalSection' @@ 1 :> 'RequestTurn') /\\ turn = 1"]
+f1[label="/\\ flag = (0 :> FALSE @@ 1 :> TRUE)/\\ state = (0 :> 'Start' @@ 1 :> 'RequestTurn')/\\ turn = 1"]
+g1[label="/\\ flag = (0 :> TRUE @@ 1 :> TRUE)/\\ state = (0 :> 'RequestTurn' @@ 1 :> 'RequestTurn')/\\ turn = 1"]
+h1[label="/\\ flag = (0 :> TRUE @@ 1 :> TRUE)/\\ state = (0 :> 'Waiting' @@ 1 :> 'RequestTurn')/\\ turn = 1"]
+i1[label="/\\ flag = (0 :> TRUE @@ 1 :> TRUE)/\\ state = (0 :> 'Waiting' @@ 1 :> 'Waiting')/\\ turn = 0"]
+j1[label="/\\ flag = (0 :> TRUE @@ 1 :> TRUE)/\\ state = (0 :> 'CriticalSection' @@ 1 :> 'Waiting')/\\ turn = 0"]
+
+
+a1->b1 [color="blue"]
+b1->c1 [color="lawngreen"]
+c1->d1 [color="green"]
+d1->a1 [color="tomato"]
+
+}
